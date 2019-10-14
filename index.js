@@ -38,11 +38,30 @@ app.post('/tokimon-add', (req,res) => {
     var electric = req.body.electric;
     var ice = req.body.ice;
     var total = req.body.total;
-    var getUserQuery = `INSERT INTO tokimon VALUES(DEFAULT,'${name}','${trainername}','${weight}','${height}','${fly}','${fight}','${fire}','${water}','${electric}','${ice}','${total}');`;
-    pool.query(getUserQuery, (error, result) => {
-        if (error)
-            res.end(error);
+    var getQuery = `INSERT INTO tokimon VALUES(DEFAULT,'${name}','${trainername}','${weight}','${height}','${fly}','${fight}','${fire}','${water}','${electric}','${ice}','${total}');`;
+    
+    pool.query(getQuery, (error, result) => {
+        if (error) {
+            res.render('pages/failmessage');
+        } 
         res.render('pages/successmessage');
+    });
+})
+
+app.post('/tokimon-delete', (req,res) => {
+    var tokimonid = req.body.id;
+    var getQuery = `DELETE FROM tokimon WHERE id = ${tokimonid};`;
+    console.log(getQuery);
+    pool.query(getQuery, (error, result) => {
+        if (error) {
+            res.end(error);
+        }
+        if (result.rowCount == 0) {
+            res.render('pages/failmessage');
+        }
+        else {
+            res.render('pages/successmessage');    
+        }
     });
 })
 
