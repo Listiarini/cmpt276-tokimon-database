@@ -76,23 +76,22 @@ table       {   margin-bottom: 4px; }
 
 th          {
                 margin: 0px;
-                background-color: rgb(210, 210, 210);
                 padding: 4px 8px;
-                width: 160px;
-                font-family: Cambria, Georgia, "Times New Roman", serif; 
-                color: rgb(0, 0, 0);
-                font-size: 16px;
-                font-weight: 700;
-                text-align: left;
+                width: 60px;
+                font-family: Century Gothic, sans-serif; 
+                color: rgb(244, 185, 45);
+                font-size: 12px;
+                text-align: center;
             }
+#nametable  { width: 150px; }
+#trainertable { width: 150px;}
 
 td          { 
-                padding-left: 5px;
+                padding-top: 5px;
                 font-family: Cambria, Georgia, "Times New Roman", serif; 
-                color: rgb(0, 0, 0);
-                font-size: 16px;
-                font-weight: 400;
-                text-align: left;
+                color: rgb(69, 72, 76);
+                font-size: 12px;
+                text-align: center;
             }
 
 input       { 
@@ -137,6 +136,12 @@ legend      { font-family: Courier New, sans-serif;
                 padding-right: 20px;
                 font-family: Century Gothic, sans-serif;
                 font-size: 14px;
+                color: rgb(244, 185, 45);
+            }
+.message { 
+                text-align: center;
+                font-family: Century Gothic, sans-serif;
+                font-size: 18px;
                 color: rgb(244, 185, 45);
             }
 

@@ -12,7 +12,7 @@ window.onload = function() {
     function updateTotal() {
         var t = parseInt(fly.value,10) + parseInt(fight.value,10) + parseInt(fire.value,10) + parseInt(water.value ,10)
         + parseInt(electric.value,10) + parseInt(ice.value,10);
-        total.innerHTML = t;
+        total.value = t;
     }
 
     fly.addEventListener("input", function() { updateTotal(); } );
