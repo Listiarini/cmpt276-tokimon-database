@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="tokimon.css">
+        <script type="text/javascript" src="tokimon.js" defer></script>
+    </head>
+    
+    <body>
+        <div id="container">
+            
+            <div id="header">
+                <h1 id="title">T o k i m o n
+                <br>
+                D a t a b a s e</h1>
+            </div>
+            <div id="content">
+                <fieldset>
+                    <legend>Tokimon Info</legend>
+                    <br>
+                    <form id="add-form" action="/tokimon-add" method="post">
+                        <img src="silhouette.png" alt="tokimon silhouette">
+                    <div class="align-left">
+                        <% rows.forEach((r) => { %> 
+                        T o k i m o n ' s&nbsp;&nbsp;&nbsp;I d
+                        <p><%= r.id %></p>
+                        T o k i m o n ' s&nbsp;&nbsp;&nbsp;N a m e
+                        <p><%= r.name %></p>
+                        T r a i n e r ' s&nbsp;&nbsp;&nbsp;N a m e
+                        <p><%= r.trainername %></p>
+                        W e i g h t
+                        <p><%= r.weight %></p>
+                        H e i g h t
+                        <p><%= r.height %></p>
+                        <br>
+                        <br>
+                        <br>
+                        A b i l i t i e s
+                        <br>
+                        <br>
+                        F l y
+                        <p><%= r.fly %></p>
+                        F i g h t 
+                        <p><%= r.fight %></p>
+                        F i r e 
+                        <p><%= r.fire %></p>
+                        W a t e r 
+                        <p><%= rows[0].water %></p>
+                        E l e c t r i c 
+                        <p><%= r.electric %></p>
+                        I c e 
+                        <p><%= r.ice %></p>
+                        T o t a l 
+                        <p><%= r.total %></p>
+                        <% }); %>
+                        <br>
+                        <br>
+                        <br>
+                    </div>
+                    </form>
+                </fieldset>    
+            </div>
+            <div id="footer">
+            <a href="tokimon.html">h o m e</a>
+            </div>
+
+        </div>
+    </body>
+</html>

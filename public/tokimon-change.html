@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="tokimon.css">
+        <script type="text/javascript" src="tokimon.js" defer></script>
+    </head>
+    
+    <body>
+        <div id="container">
+            
+            <div id="header">
+                <h1 id="title">T o k i m o n
+                <br>
+                D a t a b a s e</h1>
+            </div>
+            <div id="content">
+                <fieldset>
+                    <legend>Change a tokimon record on the database!</legend>
+                    <br>
+                    <form id="change-form" action="/tokimon-change" method="post">
+                        <img src="silhouette.png" alt="tokimon silhouette">
+                    <div class="align-left">
+                        <p> Note: Tokimon's Id is required for this form. Leave unchanged fields empty.</p>
+                        T o k i m o n ' s&nbsp;&nbsp;&nbsp;I d
+                        <br>
+                        <input type="number" name="id" required>
+                        <br>
+                        T o k i m o n ' s&nbsp;&nbsp;&nbsp;N a m e
+                        <br>
+                        <input type="text" name="name" maxlength="20">
+                        <br>
+                        T r a i n e r ' s&nbsp;&nbsp;&nbsp;N a m e
+                        <br>
+                        <input type="text" name="trainername" maxlength="20">
+                        <br>
+                        W e i g h t
+                        <br>
+                        <input type="number" id="weight" name="weight" min="0" max="9999" >
+                        <br>
+                        H e i g h t
+                        <br>
+                        <input type="number" id="height" name="height" min="0" max="9999" >
+                        <br>
+                        <br>
+                        <br>
+                        A b i l i t i e s&nbsp;&nbsp;(&nbsp;&nbsp;0&nbsp;&nbsp;t o&nbsp;&nbsp;1 0 0&nbsp;&nbsp;)
+                        <br>
+                        <br>
+                        F l y 
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="number" class="ability-input" id="fly" name="fly" min="0" max="100">
+                        <br>
+                        F i g h t 
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="number" class="ability-input" id="fight" name="fight" min="0" max="100">
+                        <br>
+                        F i r e 
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="number" class="ability-input" id="fire" name="fire" min="0" max="100">
+                        <br>
+                        W a t e r 
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="number" class="ability-input" id="water" name="water" min="0" max="100">
+                        <br>
+                        E l e c t r i c 
+                        &nbsp;
+                        <input type="number" class="ability-input" id="electric" name="electric" min="0" max="100">
+                        <br>
+                        I c e &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="number" class="ability-input" id="ice" name="ice" min="0" max="100">
+                        <br>
+                        <br>
+                        <br>
+                        <button id="submit">c h a n g e</button>
+                        <br>
+                    </div>
+                    </form>
+                </fieldset>    
+            </div>
+            <div id="footer">
+            <a href="tokimon.html">h o m e</a>
+            </div>
+
+        </div>
+    </body>
+</html>
